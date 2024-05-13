@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'v2023.8'
+        description: 'Tag to checkout:'
         required: true
 
 jobs:
