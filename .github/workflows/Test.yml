@@ -1,0 +1,19 @@
+name: Test Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to checkout'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: List tags
+      run: git tag
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.inputs.tag }} # Checkout the specified tag
