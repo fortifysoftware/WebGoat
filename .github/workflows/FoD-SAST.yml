@@ -8,12 +8,7 @@
 
 name: FoD SAST Scan
 
-on:
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag to checkout:'
-        required: true
+on: workflow_dispatch
 
 jobs:
   build:
@@ -24,7 +19,7 @@ jobs:
     - name: Check out source code
       uses: actions/checkout@v4
       with:
-        repository: 'tags/v2023.8'
+        ref: 'tags/v2023.8'
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
