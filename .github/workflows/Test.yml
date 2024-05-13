@@ -1,10 +1,5 @@
 name: Test Workflow
-on:
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag to checkout'
-        required: true
+on: workflow_dispatch
 
 jobs:
   build:
