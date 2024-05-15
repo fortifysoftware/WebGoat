@@ -7,7 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:    
       - name: Check out source code
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
       - name: Run ScanCentral SAST Scan
         uses: fortify/github-action/sc-sast-scan@v1
         env:
