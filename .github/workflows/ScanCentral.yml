@@ -15,8 +15,8 @@ jobs:
           SSC_TOKEN: ${{secrets.SSC_TOKEN}}
           SC_SAST_TOKEN: ${{secrets.CLIENT_AUTH_TOKEN}}
           # EXTRA_SC_SAST_LOGIN_OPTS: --socket-timeout=60s
-          # SSC_APPVERSION: MyApp:MyVersion
-          EXTRA_PACKAGE_OPTS: -bt Maven
+          SSC_APPVERSION: 10143
+          EXTRA_PACKAGE_OPTS: -bt mvn
           SC_SAST_SENSOR_VERSION: 23.2
           # DO_WAIT: true
           # DO_EXPORT: true
