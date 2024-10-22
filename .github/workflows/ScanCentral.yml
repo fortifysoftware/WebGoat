@@ -8,8 +8,6 @@ jobs:
     steps:    
       - name: Check out source code
         uses: actions/checkout@v4
-        with:
-          ref: 'tags/v2023.8'
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -23,7 +21,7 @@ jobs:
           SSC_TOKEN: ${{secrets.SSC_TOKEN}}
           SC_SAST_TOKEN: ${{secrets.CLIENT_AUTH_TOKEN}}
           # EXTRA_SC_SAST_LOGIN_OPTS: --socket-timeout=60s
-          SSC_APPVERSION: 10144
+          SSC_APPVERSION: 10155
           EXTRA_PACKAGE_OPTS: -bt mvn
           SC_SAST_SENSOR_VERSION: 24.2
           DO_WAIT: true
